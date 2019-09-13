@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 
@@ -19,16 +20,16 @@ public class JPizzaCost extends javax.swing.JFrame {
         inchbox = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
+        pepbox = new javax.swing.JCheckBox();
+        mushbox = new javax.swing.JCheckBox();
+        tombox = new javax.swing.JCheckBox();
+        pinbox = new javax.swing.JCheckBox();
+        beefbox = new javax.swing.JCheckBox();
+        chebox = new javax.swing.JCheckBox();
+        saubox = new javax.swing.JCheckBox();
+        hambox = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        hungrybox = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         pilbl = new javax.swing.JTextArea();
 
@@ -47,73 +48,82 @@ public class JPizzaCost extends javax.swing.JFrame {
 
         jLabel3.setText("Select the Toppings that you want.");
 
-        jCheckBox1.setText("Pepperoni");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        pepbox.setText("Pepperoni");
+        pepbox.setBorderPainted(true);
+        pepbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                pepboxActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Mushrooms");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        mushbox.setText("Mushrooms");
+        mushbox.setBorderPainted(true);
+        mushbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                mushboxActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setText("Tomatoes");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        tombox.setText("Tomatoes");
+        tombox.setBorderPainted(true);
+        tombox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                tomboxActionPerformed(evt);
             }
         });
 
-        jCheckBox4.setText("Pineapple");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        pinbox.setText("Pineapple");
+        pinbox.setBorderPainted(true);
+        pinbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                pinboxActionPerformed(evt);
             }
         });
 
-        jCheckBox5.setText("Ground Beef");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        beefbox.setText("Ground Beef");
+        beefbox.setBorderPainted(true);
+        beefbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                beefboxActionPerformed(evt);
             }
         });
 
-        jCheckBox6.setText("Extra Cheese");
-        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+        chebox.setText("Extra Cheese");
+        chebox.setBorderPainted(true);
+        chebox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox6ActionPerformed(evt);
+                cheboxActionPerformed(evt);
             }
         });
 
-        jCheckBox7.setText("Sausage");
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+        saubox.setText("Sausage");
+        saubox.setBorderPainted(true);
+        saubox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
+                sauboxActionPerformed(evt);
             }
         });
 
-        jCheckBox8.setText("Ham");
-        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+        hambox.setText("Ham");
+        hambox.setBorderPainted(true);
+        hambox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox8ActionPerformed(evt);
+                hamboxActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Once you have completed the steps above, press the button below for your total.");
 
-        jButton1.setText(">>>>");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        hungrybox.setText(">>>>");
+        hungrybox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                hungryboxActionPerformed(evt);
             }
         });
 
         pilbl.setBackground(new java.awt.Color(181, 81, 24));
         pilbl.setColumns(20);
+        pilbl.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         pilbl.setRows(5);
         jScrollPane1.setViewportView(pilbl);
 
@@ -128,41 +138,40 @@ public class JPizzaCost extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(inchbox, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(137, 137, 137)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(99, 99, 99)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(31, 31, 31)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jCheckBox1)
-                                .addComponent(jCheckBox5))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jCheckBox2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox4)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jCheckBox3))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jCheckBox6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox7)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox8))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(28, 28, 28)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pepbox)
+                            .addComponent(beefbox))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(mushbox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(pinbox)
+                                .addGap(10, 10, 10)
+                                .addComponent(tombox))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chebox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(saubox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(hambox))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(hungrybox, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -178,22 +187,22 @@ public class JPizzaCost extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox3))
+                    .addComponent(pepbox)
+                    .addComponent(mushbox)
+                    .addComponent(pinbox)
+                    .addComponent(tombox))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(beefbox)
+                    .addComponent(chebox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saubox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hambox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                    .addComponent(hungrybox, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -204,53 +213,59 @@ public class JPizzaCost extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inchboxActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void pepboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+        mushbox.setBackground(Color.blue);
+        //jCheckBox2.setBackground(Color.blue);
+        
+        
+    }//GEN-LAST:event_pepboxActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+
+    
+    private void mushboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mushboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_mushboxActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void tomboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_tomboxActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void pinboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    }//GEN-LAST:event_pinboxActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void beefboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beefboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_beefboxActionPerformed
 
-    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+    private void cheboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cheboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox6ActionPerformed
+    }//GEN-LAST:event_cheboxActionPerformed
 
-    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+    private void sauboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sauboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox7ActionPerformed
+    }//GEN-LAST:event_sauboxActionPerformed
 
-    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+    private void hamboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hamboxActionPerformed
         tops+=1;
-    }//GEN-LAST:event_jCheckBox8ActionPerformed
+    }//GEN-LAST:event_hamboxActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void hungryboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hungryboxActionPerformed
         //get info from inchbox and the check boxes and then calc
         try{
         inch = Integer.parseInt(inchbox.getText());
         }catch(Exception e){
-            JOptionPane.showMessageDialog(this, "ERROR - MUST ENTER A NUMBER");
+            JOptionPane.showMessageDialog(this, "ERROR - MUST ENTER AN INTEGER");
             return;
         }
         if(inch<=0){
-            JOptionPane.showMessageDialog(this, "ERROR - MUST ENTER A POSITIVE NUMBER");
+            JOptionPane.showMessageDialog(this, "ERROR - MUST ENTER A POSITIVE INTEGER");
             return;
         }
         total = (toppings*tops) + (inch*bing) + base;
         pilbl.setText(String.format("Adding in utilities and base ingridients,\n The cost of your pizza is $%.2f",total));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_hungryboxActionPerformed
 
 
     public static void main(String args[]) {
@@ -286,21 +301,21 @@ public class JPizzaCost extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox beefbox;
+    private javax.swing.JCheckBox chebox;
+    private javax.swing.JCheckBox hambox;
+    private javax.swing.JButton hungrybox;
     private javax.swing.JTextField inchbox;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox mushbox;
+    private javax.swing.JCheckBox pepbox;
     private javax.swing.JTextArea pilbl;
+    private javax.swing.JCheckBox pinbox;
+    private javax.swing.JCheckBox saubox;
+    private javax.swing.JCheckBox tombox;
     // End of variables declaration//GEN-END:variables
 }
