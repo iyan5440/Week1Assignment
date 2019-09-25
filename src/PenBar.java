@@ -10,7 +10,7 @@ public class PenBar {
     Color col;
     public void draw(Pen p){
         if(width >400 || width <50) {
-            System.out.println("ERROR - MUST BE FROM 50 - 450");
+            System.out.println("ERROR - MUST BE FROM 50 - 400");
             return;
         }
         p.setColor(col);

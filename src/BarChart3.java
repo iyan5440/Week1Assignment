@@ -19,18 +19,18 @@ public class BarChart3 {
         PenBar pb4 = new PenBar();
         //PenBar pb1=null,pb2= null,pb3 = null,pb4=null;
         
-        for (int i = 0; i < 4; i++) {
-            System.out.format("Enter value %d from 50 - 450: ",i);
-            if(i==0) { 
+        for (int i = 1; i < 5; i++) {
+            System.out.format("Enter value %d from 50 - 400: ",i);
+            if(i==1) { 
                 try{
                 x1=s.nextInt();
                 }catch(Exception e){
-                return  ;
+                return;
                 }
                         MakeBar(p,pb1,200,x1,Color.blue);
 
             }
-            if(i==1) { 
+            if(i==2) { 
                 try{
                 x2=s.nextInt();
                 }catch(Exception e){
@@ -39,7 +39,7 @@ public class BarChart3 {
                 MakeBar(p,pb2,100,x2,Color.red);
 
             }
-            if(i==2) { 
+            if(i==3) { 
                 try{
                 x3=s.nextInt();
                 }catch(Exception e){
@@ -48,7 +48,7 @@ public class BarChart3 {
                         MakeBar(p,pb3,0,x3,Color.green);
 
             }
-            if(i==3) { 
+            if(i==4) { 
                 try{
                 x4=s.nextInt();
                 }catch(Exception e){
