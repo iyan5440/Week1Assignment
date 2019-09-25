@@ -8,6 +8,7 @@ public class JPizzaCost extends javax.swing.JFrame {
     int inch, tops;
     double total;
     final double base = 2.25, toppings = .75, bing =.5;
+    int muck,peck,tock,pick,beck,chck,sack,hack;
     public JPizzaCost() {
         initComponents();
     }
@@ -214,9 +215,16 @@ public class JPizzaCost extends javax.swing.JFrame {
     }//GEN-LAST:event_inchboxActionPerformed
 
     private void pepboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pepboxActionPerformed
-        tops+=1;
-        mushbox.setBackground(Color.blue);
-        //jCheckBox2.setBackground(Color.blue);
+        peck+=1;
+        if(peck==1){
+            tops+=1;
+            
+        }
+        if(peck==2){
+            tops-=1;
+            peck=0;
+        }
+        
         
         
     }//GEN-LAST:event_pepboxActionPerformed
@@ -224,31 +232,89 @@ public class JPizzaCost extends javax.swing.JFrame {
 
     
     private void mushboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mushboxActionPerformed
-        tops+=1;
+        muck+=1;
+        if(muck==1){
+            tops+=1;
+            
+        }
+        if(muck==2){
+            tops-=1;
+            muck=0;
+        }
+        
+        
     }//GEN-LAST:event_mushboxActionPerformed
 
     private void tomboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomboxActionPerformed
-        tops+=1;
+        tock+=1;
+        if(tock==1){
+            tops+=1;
+            
+        }
+        if(tock==2){
+            tops-=1;
+            tock=0;
+        }
     }//GEN-LAST:event_tomboxActionPerformed
 
     private void pinboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinboxActionPerformed
-        tops+=1;
+        pick+=1;
+        if(pick==1){
+            tops+=1;
+            
+        }
+        if(pick==2){
+            tops-=1;
+            pick=0;
+        }
     }//GEN-LAST:event_pinboxActionPerformed
 
     private void beefboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beefboxActionPerformed
-        tops+=1;
+        beck+=1;
+        if(beck==1){
+            tops+=1;
+            
+        }
+        if(beck==2){
+            tops-=1;
+            beck=0;
+        }
     }//GEN-LAST:event_beefboxActionPerformed
 
     private void cheboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cheboxActionPerformed
-        tops+=1;
+        chck+=1;
+        if(chck==1){
+            tops+=1;
+            
+        }
+        if(chck==2){
+            tops-=1;
+            chck=0;
+        }
     }//GEN-LAST:event_cheboxActionPerformed
 
     private void sauboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sauboxActionPerformed
-        tops+=1;
+        sack+=1;
+        if(sack==1){
+            tops+=1;
+            
+        }
+        if(sack==2){
+            tops-=1;
+            sack=0;
+        }
     }//GEN-LAST:event_sauboxActionPerformed
 
     private void hamboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hamboxActionPerformed
-        tops+=1;
+        hack+=1;
+        if(hack==1){
+            tops+=1;
+            
+        }
+        if(hack==2){
+            tops-=1;
+            hack=0;
+        }
     }//GEN-LAST:event_hamboxActionPerformed
 
     private void hungryboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hungryboxActionPerformed
@@ -265,6 +331,14 @@ public class JPizzaCost extends javax.swing.JFrame {
         }
         total = (toppings*tops) + (inch*bing) + base;
         pilbl.setText(String.format("Adding in utilities and base ingridients,\n The cost of your pizza is $%.2f",total));
+        System.out.println(peck);
+        System.out.println(muck);
+        System.out.println(tock);
+        System.out.println(pick);
+        System.out.println(beck);
+        System.out.println(chck);
+        System.out.println(sack);
+        System.out.println(hack);
     }//GEN-LAST:event_hungryboxActionPerformed
 
 
